@@ -52,12 +52,9 @@ def mo_morse_string_encoder(text):
     
     for word in text.split(' '):
         for letter in word:
-            # Look up the Morse code for each letter and add a space to separate Morse characters within a word
             encoded_message += alpha_to_morse.get(letter, '') + ' '
-        # Add a slash to separate words in Morse code
         encoded_message = encoded_message.rstrip() + '/'
         
-    # Remove the trailing slash and return the encoded message
     return encoded_message.rstrip('/')
 
 
